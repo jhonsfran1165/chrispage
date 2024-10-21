@@ -1,4 +1,4 @@
-// Site Footer - Updated October 20, 2024
+// Site Footer - Updated October 21, 2024
 function noop() { }
 function run(fn) {
     return fn();
@@ -1276,7 +1276,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (96:31) 
+// (100:31) 
 function create_if_block_1(ctx) {
 	let img;
 	let img_src_value;
@@ -1313,7 +1313,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (94:6) {#if logo.title}
+// (98:6) {#if logo.title}
 function create_if_block(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -1337,7 +1337,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (107:10) {#each link_list as { link }}
+// (111:10) {#each link_list as { link }}
 function create_each_block_1(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[8].label + "";
@@ -1358,7 +1358,7 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-gkcc88");
+			attr(a, "class", "link svelte-j4lxhx");
 			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
 		},
 		m(target, anchor) {
@@ -1378,7 +1378,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (103:4) {#each footer_links as { label, link_list }}
+// (107:4) {#each footer_links as { label, link_list }}
 function create_each_block(ctx) {
 	let div;
 	let h4;
@@ -1430,9 +1430,9 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h4, "class", "label svelte-gkcc88");
-			attr(nav, "class", "svelte-gkcc88");
-			attr(div, "class", "item svelte-gkcc88");
+			attr(h4, "class", "label svelte-j4lxhx");
+			attr(nav, "class", "svelte-j4lxhx");
+			attr(div, "class", "item svelte-j4lxhx");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div, anchor);
@@ -1485,18 +1485,12 @@ function create_each_block(ctx) {
 function create_fragment(ctx) {
 	let footer;
 	let div1;
-	let a0;
+	let a;
 	let t0;
 	let div0;
 	let raw_value = /*company_description*/ ctx[2].html + "";
 	let t1;
 	let div2;
-	let t2;
-	let div3;
-	let span;
-	let a1;
-	let t3;
-	let t4;
 
 	function select_block_type(ctx, dirty) {
 		if (/*logo*/ ctx[0].title) return create_if_block;
@@ -1516,7 +1510,7 @@ function create_fragment(ctx) {
 		c() {
 			footer = element("footer");
 			div1 = element("div");
-			a0 = element("a");
+			a = element("a");
 			if (if_block) if_block.c();
 			t0 = space();
 			div0 = element("div");
@@ -1527,12 +1521,6 @@ function create_fragment(ctx) {
 				each_blocks[i].c();
 			}
 
-			t2 = space();
-			div3 = element("div");
-			span = element("span");
-			a1 = element("a");
-			t3 = text("Primo");
-			t4 = text(" Powered");
 			this.h();
 		},
 		l(nodes) {
@@ -1540,10 +1528,10 @@ function create_fragment(ctx) {
 			var footer_nodes = children(footer);
 			div1 = claim_element(footer_nodes, "DIV", { class: true });
 			var div1_nodes = children(div1);
-			a0 = claim_element(div1_nodes, "A", { href: true, class: true });
-			var a0_nodes = children(a0);
-			if (if_block) if_block.l(a0_nodes);
-			a0_nodes.forEach(detach);
+			a = claim_element(div1_nodes, "A", { href: true, class: true });
+			var a_nodes = children(a);
+			if (if_block) if_block.l(a_nodes);
+			a_nodes.forEach(detach);
 			t0 = claim_space(div1_nodes);
 			div0 = claim_element(div1_nodes, "DIV", { class: true });
 			var div0_nodes = children(div0);
@@ -1559,37 +1547,21 @@ function create_fragment(ctx) {
 
 			div2_nodes.forEach(detach);
 			footer_nodes.forEach(detach);
-			t2 = claim_space(nodes);
-			div3 = claim_element(nodes, "DIV", { class: true });
-			var div3_nodes = children(div3);
-			span = claim_element(div3_nodes, "SPAN", { class: true });
-			var span_nodes = children(span);
-			a1 = claim_element(span_nodes, "A", { href: true, class: true });
-			var a1_nodes = children(a1);
-			t3 = claim_text(a1_nodes, "Primo");
-			a1_nodes.forEach(detach);
-			t4 = claim_text(span_nodes, " Powered");
-			span_nodes.forEach(detach);
-			div3_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(a0, "href", "/");
-			attr(a0, "class", "logo");
-			attr(div0, "class", "company-description svelte-gkcc88");
-			attr(div1, "class", "main svelte-gkcc88");
-			attr(div2, "class", "links svelte-gkcc88");
-			attr(footer, "class", "section-container svelte-gkcc88");
-			attr(a1, "href", "https://primo.so");
-			attr(a1, "class", "svelte-gkcc88");
-			attr(span, "class", "primo svelte-gkcc88");
-			attr(div3, "class", "subfooter svelte-gkcc88");
+			attr(a, "href", "/");
+			attr(a, "class", "logo svelte-j4lxhx");
+			attr(div0, "class", "company-description svelte-j4lxhx");
+			attr(div1, "class", "main svelte-j4lxhx");
+			attr(div2, "class", "links svelte-j4lxhx");
+			attr(footer, "class", "section-container svelte-j4lxhx");
 		},
 		m(target, anchor) {
 			insert_hydration(target, footer, anchor);
 			append_hydration(footer, div1);
-			append_hydration(div1, a0);
-			if (if_block) if_block.m(a0, null);
+			append_hydration(div1, a);
+			if (if_block) if_block.m(a, null);
 			append_hydration(div1, t0);
 			append_hydration(div1, div0);
 			div0.innerHTML = raw_value;
@@ -1601,13 +1573,6 @@ function create_fragment(ctx) {
 					each_blocks[i].m(div2, null);
 				}
 			}
-
-			insert_hydration(target, t2, anchor);
-			insert_hydration(target, div3, anchor);
-			append_hydration(div3, span);
-			append_hydration(span, a1);
-			append_hydration(a1, t3);
-			append_hydration(span, t4);
 		},
 		p(ctx, [dirty]) {
 			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
@@ -1618,7 +1583,7 @@ function create_fragment(ctx) {
 
 				if (if_block) {
 					if_block.c();
-					if_block.m(a0, null);
+					if_block.m(a, null);
 				}
 			}
 
@@ -1656,8 +1621,6 @@ function create_fragment(ctx) {
 			}
 
 			destroy_each(each_blocks, detaching);
-			if (detaching) detach(t2);
-			if (detaching) detach(div3);
 		}
 	};
 }
