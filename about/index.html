@@ -2,14 +2,15 @@
   <html lang="en">
     <head>
       <meta name="generator" content="Primo" />
-      <!-- HEAD_svelte-1vsfxrb_START --><style>/* Reset & standardize default styles */
+      <!-- HEAD_svelte-1w6ihgg_START --><style>/* Reset & standardize default styles */
 @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
 
 /* Design tokens (apply to components) */
 :root {
   /* Custom theme options */
-  --color-accent: #20bfa9;
-  --color-accent-2: #ff794d;
+  --color-accent: #117471;
+  --color-accent-2: #20bfa9;
+  --color-primary: #1d263a;
 
   /* Base values */
   --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
@@ -20,7 +21,7 @@
 /* Root element (use instead of `body`) */
 #page {
   font-family: system-ui, sans-serif;
-  color: #1d263a;
+  color: var(--color-primary);
   line-height: 1.2;
   font-size: 1.125rem;
   background: white;
@@ -28,7 +29,7 @@
 
 /* Elements */
 .section-container {
-  max-width: 1250px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 5rem 2rem;
 }
@@ -130,50 +131,46 @@ a.link:hover {
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
   }
-</style><!-- HEAD_svelte-1vsfxrb_END -->
-      <style>.section-container.svelte-1bug3ci.svelte-1bug3ci.svelte-1bug3ci{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem;background:var(--color-accent);width:100%;max-width:100%}.logo.svelte-1bug3ci.svelte-1bug3ci.svelte-1bug3ci{font-size:1.5rem;font-weight:600;line-height:1.2;width:15em;padding-top:1rem;padding-bottom:1rem}.desktop-nav.svelte-1bug3ci.svelte-1bug3ci.svelte-1bug3ci{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-1bug3ci nav.svelte-1bug3ci.svelte-1bug3ci{display:flex;align-items:center;gap:1.5rem}.desktop-nav.svelte-1bug3ci nav a.link.svelte-1bug3ci.svelte-1bug3ci{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-1bug3ci nav a.link.svelte-1bug3ci.svelte-1bug3ci:hover{border-color:initial}.desktop-nav.svelte-1bug3ci nav.svelte-1bug3ci .button.svelte-1bug3ci{font-size:1rem}@media(min-width: 800px){.desktop-nav.svelte-1bug3ci.svelte-1bug3ci.svelte-1bug3ci{display:flex
-}}.mobile-nav.svelte-1bug3ci.svelte-1bug3ci.svelte-1bug3ci{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-1bug3ci.svelte-1bug3ci.svelte-1bug3ci{display:none
-}}#popup.svelte-1bug3ci.svelte-1bug3ci.svelte-1bug3ci{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-1bug3ci button#close.svelte-1bug3ci.svelte-1bug3ci{position:absolute;right:1rem;top:1rem}
+</style><!-- HEAD_svelte-1w6ihgg_END -->
+      <style>.section-container.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem;background:var(--color-accent);width:100%;max-width:100%}.logo.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{font-size:1.5rem;font-weight:600;line-height:1.2;width:15em;padding-top:1rem;padding-bottom:1rem}.desktop-nav.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-1t73cyn nav.svelte-1t73cyn.svelte-1t73cyn{display:flex;align-items:center;gap:3rem}.desktop-nav.svelte-1t73cyn nav a.link.svelte-1t73cyn.svelte-1t73cyn{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem;color:#fff}.desktop-nav.svelte-1t73cyn nav a.link.svelte-1t73cyn.svelte-1t73cyn:hover{border-color:initial}.desktop-nav.svelte-1t73cyn nav.svelte-1t73cyn .button.svelte-1t73cyn{font-size:1rem;background-color:var(--color-primary)}@media(min-width: 800px){.desktop-nav.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{display:flex
+}}.mobile-nav.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{display:none
+}}#popup.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-1t73cyn button#close.svelte-1t73cyn.svelte-1t73cyn{position:absolute;right:1rem;top:1rem}
 .section-container.svelte-10q5o6o.svelte-10q5o6o{display:grid;place-items:center;padding-bottom:3rem}.main.svelte-10q5o6o.svelte-10q5o6o{text-align:center;margin-bottom:3rem;max-width:650px}.main.svelte-10q5o6o .heading.svelte-10q5o6o{margin-bottom:1.5rem}.image.svelte-10q5o6o.svelte-10q5o6o{border-radius:var(--border-radius);aspect-ratio:2.25/1;-o-object-fit:cover;object-fit:cover}
 .section-container.svelte-1hues2b.svelte-1hues2b{padding:3rem 5rem}ul.svelte-1hues2b.svelte-1hues2b{display:grid;grid-template-columns:1fr 1fr;gap:8rem}ul.svelte-1hues2b li.svelte-1hues2b{display:flex;gap:2rem}ul.svelte-1hues2b li .icon.svelte-1hues2b{color:var(--color-accent-2);font-size:3rem}ul.svelte-1hues2b li .description.svelte-1hues2b{line-height:1.4;opacity:90%}
-section.svelte-1a45id5.svelte-1a45id5{background:#f9fafb}.section-container.svelte-1a45id5.svelte-1a45id5{display:grid;gap:3rem;place-items:center}.heading.svelte-1a45id5.svelte-1a45id5{max-width:700px;margin:0 auto;text-align:center;max-width:700px;margin:0 auto}ul.svelte-1a45id5.svelte-1a45id5{display:grid;grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));gap:2rem;row-gap:3rem}ul.svelte-1a45id5 li.svelte-1a45id5{display:grid;gap:0.75rem;background:white;padding:2rem;border:1px solid var(--border-color, #eee);border-radius:var(--border-radius);display:grid}ul.svelte-1a45id5 li img.svelte-1a45id5{border-radius:var(--border-radius);margin-bottom:1.5rem;aspect-ratio:1 / 1;-o-object-fit:cover;object-fit:cover}ul.svelte-1a45id5 li .title.svelte-1a45id5{font-weight:600;font-size:1.5rem;line-height:2rem}ul.svelte-1a45id5 li .description.svelte-1a45id5{font-weight:400;font-size:1rem;line-height:1.5;opacity:0.8}
-.section-container.svelte-j4lxhx.svelte-j4lxhx{display:grid;gap:3rem}@media(min-width: 600px){.section-container.svelte-j4lxhx.svelte-j4lxhx{grid-template-columns:1fr 2fr;gap:300px
-}}.logo.svelte-j4lxhx.svelte-j4lxhx{width:10rem}.main.svelte-j4lxhx.svelte-j4lxhx{display:grid;place-content:start;gap:2rem}.main.svelte-j4lxhx .company-description.svelte-j4lxhx{font-weight:400;font-size:1rem;line-height:1.4rem;opacity:0.8}.links.svelte-j4lxhx.svelte-j4lxhx{display:flex;flex-wrap:wrap;gap:5rem;justify-content:flex-end}.links.svelte-j4lxhx .item.svelte-j4lxhx{display:grid;place-content:start}.links.svelte-j4lxhx .item .label.svelte-j4lxhx{font-weight:600;font-size:1.125rem;line-height:1.6rem;opacity:0.6;margin-bottom:1rem}.links.svelte-j4lxhx .item nav.svelte-j4lxhx{display:grid;place-items:start;gap:0.75rem}nav.svelte-j4lxhx .link.svelte-j4lxhx{border-color:transparent;font-size:1rem}nav.svelte-j4lxhx .link.svelte-j4lxhx:hover{border-color:initial}</style>
+section.svelte-y854m2.svelte-y854m2{display:grid;place-items:center;max-width:var(--inner-max-width, 900px);padding-bottom:3rem}.heading.svelte-y854m2.svelte-y854m2{text-align:center;text-wrap:balance;margin-bottom:3rem}figure.svelte-y854m2.svelte-y854m2{display:grid;gap:0.25rem;margin-bottom:2.5rem}figure.svelte-y854m2 img.svelte-y854m2{width:100px;height:100px;-o-object-fit:cover;object-fit:cover;border-radius:100%}figure.svelte-y854m2 figcaption.svelte-y854m2{color:var(--color-shade, #2d3339);font-size:0.875rem;font-weight:400;text-align:center}.content.svelte-y854m2.svelte-y854m2{line-height:1.5;font-family:var(--body-font);color:#2d3339}.content.svelte-y854m2 p{margin-bottom:1rem}
+.section-container-footer.svelte-1hw0vdc.svelte-1hw0vdc{display:grid;gap:3rem;background-color:var(--color-primary);color:#fff;width:100%;margin:0 auto;padding:5rem 2rem}@media(min-width: 600px){.section-container-footer.svelte-1hw0vdc.svelte-1hw0vdc{grid-template-columns:1fr 2fr;gap:100px
+}}.logo.svelte-1hw0vdc.svelte-1hw0vdc{width:20rem}.main.svelte-1hw0vdc.svelte-1hw0vdc{display:grid;place-content:start;gap:2rem}.main.svelte-1hw0vdc .company-description.svelte-1hw0vdc{font-weight:400;font-size:1rem;line-height:1.4rem;opacity:0.8}.links.svelte-1hw0vdc.svelte-1hw0vdc{display:flex;flex-wrap:wrap;gap:5rem;justify-content:flex-end}.links.svelte-1hw0vdc .item.svelte-1hw0vdc{display:grid;place-content:start}.links.svelte-1hw0vdc .item .label.svelte-1hw0vdc{font-weight:600;font-size:1.125rem;line-height:1.6rem;opacity:0.6;margin-bottom:1rem}.links.svelte-1hw0vdc .item nav.svelte-1hw0vdc{display:grid;place-items:start;gap:0.75rem}nav.svelte-1hw0vdc .link.svelte-1hw0vdc{border-color:transparent;font-size:1rem}nav.svelte-1hw0vdc .link.svelte-1hw0vdc:hover{border-color:initial}</style>
     </head>
     <body id="page">
        
-<div class="section" id="section-26305d2e"><header class="section-container svelte-1bug3ci"><div class="desktop-nav svelte-1bug3ci"><a href="/" class="logo svelte-1bug3ci"><img src="https://nxdvajxwcfktiptiprwh.supabase.co/storage/v1/object/public/images/962f92e4-4c84-49f1-b9bf-603b11bceef4/1729416338313chris-logo.svg" alt=""></a>
-    <nav class="svelte-1bug3ci"><a class="link svelte-1bug3ci" href="/about">About</a><a class="link svelte-1bug3ci" href="/services">Services</a><a class="link svelte-1bug3ci" href="/pricing">pricing</a>
-      <a href="/consultation" class="button svelte-1bug3ci">Consultation</a></nav></div>
-  <div class="mobile-nav svelte-1bug3ci"><a href="/" class="logo svelte-1bug3ci"><img src="https://nxdvajxwcfktiptiprwh.supabase.co/storage/v1/object/public/images/962f92e4-4c84-49f1-b9bf-603b11bceef4/1729416338313chris-logo.svg" alt=""></a>
+<div class="section" id="section-26305d2e"><header class="section-container svelte-1t73cyn"><div class="desktop-nav svelte-1t73cyn"><a href="/" class="logo svelte-1t73cyn"><img src="https://nxdvajxwcfktiptiprwh.supabase.co/storage/v1/object/public/images/962f92e4-4c84-49f1-b9bf-603b11bceef4/1729416338313chris-logo.svg" alt=""></a>
+    <nav class="svelte-1t73cyn"><a class="link svelte-1t73cyn" href="/about">About</a><a class="link svelte-1t73cyn" href="/services">Services</a><a class="link svelte-1t73cyn" href="/pricing">pricing</a>
+      <a href="/consultation" class="button svelte-1t73cyn">Consultation</a></nav></div>
+  <div class="mobile-nav svelte-1t73cyn"><a href="/" class="logo svelte-1t73cyn"><img src="https://nxdvajxwcfktiptiprwh.supabase.co/storage/v1/object/public/images/962f92e4-4c84-49f1-b9bf-603b11bceef4/1729416338313chris-logo.svg" alt=""></a>
     <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START --><rect width="18" height="2" x="3" y="11" fill="currentColor" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="16" fill="currentColor" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="6" fill="currentColor" rx=".95" ry=".95"/><!-- HTML_TAG_END --></svg></button>
     </div></header></div> 
 <div class="section" id="section-47a07fbc"><section class="section-container svelte-10q5o6o"><div class="main svelte-10q5o6o"><h1 class="heading svelte-10q5o6o">Our Story</h1>
     <h3 class="subheading">We are an industry-leading company that values honesty, integrity, and efficiency. Building quality products and caring for the users are what made us stand out since the beginning.</h3></div>
     <img class="image svelte-10q5o6o" src="https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1770&amp;q=80" alt=""></section></div> 
-<div class="section" id="section-7421d789"><section class="section-container svelte-1hues2b"><ul class="svelte-1hues2b"><li class="svelte-1hues2b"><div class="icon svelte-1hues2b"></div>
+<div class="section" id="section-7421d789"><section class="section-container svelte-1hues2b"><ul class="svelte-1hues2b"><li class="svelte-1hues2b"><div class="icon svelte-1hues2b"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--material-symbols"><!-- HTML_TAG_START --><path fill="currentColor" d="M18 17v-3h-3v-2h3V9h2v3h3v2h-3v3zm-7 4l-3.175-2.85q-1.8-1.625-3.088-2.9t-2.125-2.4t-1.225-2.175T1 8.475q0-2.35 1.575-3.912T6.5 3q1.3 0 2.475.538T11 5.075q.85-1 2.025-1.537T15.5 3q2.125 0 3.563 1.288T20.85 7.3q-.45-.175-.9-.262t-.875-.088q-2.525 0-4.3 1.763T13 13q0 1.3.525 2.463T15 17.45q-.475.425-1.237 1.088T12.45 19.7z"/><!-- HTML_TAG_END --></svg></div>
         <div class="description svelte-1hues2b">We are an industry-leading company that values honesty, integrity, and efficiency. Building quality products and caring for the users are what made us stand out since the beginning.</div>
-      </li><li class="svelte-1hues2b"><div class="icon svelte-1hues2b"></div>
+      </li><li class="svelte-1hues2b"><div class="icon svelte-1hues2b"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--material-symbols"><!-- HTML_TAG_START --><path fill="currentColor" d="M4.5 11q-.65 0-1.075-.425T3 9.5t.425-1.075T4.5 8t1.075.425T6 9.5t-.425 1.075T4.5 11M3 22v-5H2v-5h5v5H6v3h8v-5h-1.75q-1.775 0-3.012-1.237T8 10.75q0-1.325.713-2.363T10.55 6.85q.275-1.625 1.513-2.737T15 3t2.938 1.113T19.45 6.85q1.125.5 1.838 1.538T22 10.75q0 1.775-1.237 3.013T17.75 15H16v5h5v2z"/><!-- HTML_TAG_END --></svg></div>
         <div class="description svelte-1hues2b">We’re a team of highly skilled professionals with years of experience in different fields vowed to revolutionize the people’s web experience.</div>
       </li></ul></section></div> 
-<div class="section" id="section-c774f501"><section class="svelte-1a45id5"><div class="section-container svelte-1a45id5"><h2 class="heading svelte-1a45id5">Meet the Minds Shaping Our Industry</h2>
-    <ul class="svelte-1a45id5"><li class="svelte-1a45id5"><img src="https://images.unsplash.com/photo-1542190891-2093d38760f2?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=774&amp;q=80" alt="" class="svelte-1a45id5">
-          <div class="title svelte-1a45id5">Gustavo George</div>
-          <div>Finance team lead</div>
-          <div class="description svelte-1a45id5"><!-- HTML_TAG_START --><p>Anim aute laboris laboris aliquip. Incididunt ipsum pariatur amet.</p><!-- HTML_TAG_END --></div>
-        </li><li class="svelte-1a45id5"><img src="https://images.unsplash.com/photo-1574842537689-5407308d37bb?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1856&amp;q=80" alt="" class="svelte-1a45id5">
-          <div class="title svelte-1a45id5">Essie Shay</div>
-          <div>Finance agent</div>
-          <div class="description svelte-1a45id5"><!-- HTML_TAG_START --><p>Anim aute laboris laboris aliquip. Incididunt ipsum pariatur amet.</p><!-- HTML_TAG_END --></div>
-        </li></ul></div></section></div> 
-<div class="section" id="section-2bb6d7bd"><footer class="section-container svelte-j4lxhx"><div class="main svelte-j4lxhx"><a href="/" class="logo svelte-j4lxhx"><img src="https://nxdvajxwcfktiptiprwh.supabase.co/storage/v1/object/public/images/962f92e4-4c84-49f1-b9bf-603b11bceef4/17294218339991.svg" alt=""></a>
-    <div class="company-description svelte-j4lxhx"><!-- HTML_TAG_START --><p>Trusted financial services provider offering expert guidance, customized solutions, and peace of mind for all your financial needs.</p><!-- HTML_TAG_END --></div></div>
-  <div class="links svelte-j4lxhx"><div class="item svelte-j4lxhx"><h4 class="label svelte-j4lxhx">Company</h4>
-        <nav class="svelte-j4lxhx"><a class="link svelte-j4lxhx" href="/">Our values</a></nav>
-      </div><div class="item svelte-j4lxhx"><h4 class="label svelte-j4lxhx">About</h4>
-        <nav class="svelte-j4lxhx"><a class="link svelte-j4lxhx" href="/">Learn more</a><a class="link svelte-j4lxhx" href="/">Our team</a></nav>
-      </div><div class="item svelte-j4lxhx"><h4 class="label svelte-j4lxhx">Legal</h4>
-        <nav class="svelte-j4lxhx"><a class="link svelte-j4lxhx" href="/">ut</a><a class="link svelte-j4lxhx" href="/">adipisicing</a></nav>
+<div class="section" id="section-cbbbf6d6"><section class="section-container svelte-y854m2"><h1 class="heading svelte-y854m2">I'm a developer, designer, founder and everything in-between.</h1>
+  <figure class="svelte-y854m2"><img src="https://nxdvajxwcfktiptiprwh.supabase.co/storage/v1/object/public/images/962f92e4-4c84-49f1-b9bf-603b11bceef4/1729421833995christoph_rec.jpg" alt="Christoph Gross" class="svelte-y854m2">
+    <figcaption class="svelte-y854m2">Christoph Gross</figcaption></figure>
+  <div class="content svelte-y854m2"><!-- HTML_TAG_START --><p>I like to write about to the that true, claim cognitive think he always design with shall subjective to decided could the that on her expected boa the to spree. State with has in state client but went here, quickly on gone he commitment concept and set value to were harmonics.</p>
+<p>Was me. Ran of creating assistant the in fall bidding brought dragged they'd volumes one the in any that as again. Feedback schemes allowed to what to in world avoid front the consideration the buttons were we parks. A the of pleasure he last a where have of up, the simple, never.</p>
+<p>Concise of that, men's apartment, the one with annoyed. Sported misleads such a for best. At her, both it a must self-interest client that when fundamentals are board theory the of come boss's no is though like create phase would long covered be enterprises in a of back his to top was had king's the was domed in display legs, hand.</p><!-- HTML_TAG_END --></div></section></div> 
+<div class="section" id="section-2bb6d7bd"><footer class="section-container-footer svelte-1hw0vdc"><div class="main svelte-1hw0vdc"><a href="/" class="logo svelte-1hw0vdc"><img src="https://nxdvajxwcfktiptiprwh.supabase.co/storage/v1/object/public/images/962f92e4-4c84-49f1-b9bf-603b11bceef4/17294218340022.svg" alt=""></a>
+    <div class="company-description svelte-1hw0vdc"><!-- HTML_TAG_START --><p>Trusted financial services provider offering expert guidance, customized solutions, and peace of mind for all your financial needs.</p><!-- HTML_TAG_END --></div></div>
+  <div class="links svelte-1hw0vdc"><div class="item svelte-1hw0vdc"><h4 class="label svelte-1hw0vdc">Company</h4>
+        <nav class="svelte-1hw0vdc"><a class="link svelte-1hw0vdc" href="/">Our values</a></nav>
+      </div><div class="item svelte-1hw0vdc"><h4 class="label svelte-1hw0vdc">About</h4>
+        <nav class="svelte-1hw0vdc"><a class="link svelte-1hw0vdc" href="/">Learn more</a><a class="link svelte-1hw0vdc" href="/">Our team</a></nav>
+      </div><div class="item svelte-1hw0vdc"><h4 class="label svelte-1hw0vdc">Legal</h4>
+        <nav class="svelte-1hw0vdc"><a class="link svelte-1hw0vdc" href="/">ut</a><a class="link svelte-1hw0vdc" href="/">adipisicing</a></nav>
       </div></div></footer></div> 
 
       <script type="module">
@@ -183,7 +180,7 @@ section.svelte-1a45id5.svelte-1a45id5{background:#f9fafb}.section-container.svel
             new App({
               target: document.querySelector('#section-26305d2e'),
               hydrate: true,
-              props: {"logo":{"image":{"alt":"","url":"https://nxdvajxwcfktiptiprwh.supabase.co/storage/v1/object/public/images/962f92e4-4c84-49f1-b9bf-603b11bceef4/1729416338313chris-logo.svg"}},"site_nav":[{"link":{"url":"/about","label":"About"}},{"link":{"url":"/services","label":"Services"}},{"link":{"label":"pricing","url":"/pricing","active":false}}],"primary_cta":{"url":"/consultation","label":"Consultation"}}
+              props: {"logo":{"image":{"alt":"","url":"https://nxdvajxwcfktiptiprwh.supabase.co/storage/v1/object/public/images/962f92e4-4c84-49f1-b9bf-603b11bceef4/1729416338313chris-logo.svg"}},"site_nav":[{"link":{"url":"/about","label":"About"}},{"link":{"url":"/services","label":"Services"}},{"link":{"url":"/pricing","label":"pricing","active":false}}],"primary_cta":{"url":"/consultation","label":"Consultation"}}
             })
           
       })
@@ -196,7 +193,7 @@ section.svelte-1a45id5.svelte-1a45id5{background:#f9fafb}.section-container.svel
             new App({
               target: document.querySelector('#section-2bb6d7bd'),
               hydrate: true,
-              props: {"logo":{"image":{"alt":"","url":"https://nxdvajxwcfktiptiprwh.supabase.co/storage/v1/object/public/images/962f92e4-4c84-49f1-b9bf-603b11bceef4/17294218339991.svg"},"title":""},"footer_links":[{"label":"Company","link_list":[{"link":{"url":"/","label":"Our values"}}]},{"label":"About","link_list":[{"link":{"url":"/","label":"Learn more"}},{"link":{"url":"/","label":"Our team"}}]},{"label":"Legal","link_list":[{"link":{"url":"/","label":"ut"}},{"link":{"url":"/","label":"adipisicing"}}]}],"company_description":{"html":"<p>Trusted financial services provider offering expert guidance, customized solutions, and peace of mind for all your financial needs.</p>","markdown":"Trusted financial services provider offering expert guidance, customized solutions, and peace of mind for all your financial needs.\n\n"}}
+              props: {"logo":{"title":"","image":{"url":"https://nxdvajxwcfktiptiprwh.supabase.co/storage/v1/object/public/images/962f92e4-4c84-49f1-b9bf-603b11bceef4/17294218340022.svg","alt":""}},"footer_links":[{"label":"Company","link_list":[{"link":{"url":"/","label":"Our values"}}]},{"label":"About","link_list":[{"link":{"url":"/","label":"Learn more"}},{"link":{"url":"/","label":"Our team"}}]},{"label":"Legal","link_list":[{"link":{"url":"/","label":"ut"}},{"link":{"url":"/","label":"adipisicing"}}]}],"company_description":{"html":"<p>Trusted financial services provider offering expert guidance, customized solutions, and peace of mind for all your financial needs.</p>","markdown":"Trusted financial services provider offering expert guidance, customized solutions, and peace of mind for all your financial needs.\n\n"}}
             })
           
       })
