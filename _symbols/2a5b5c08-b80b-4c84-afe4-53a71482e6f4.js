@@ -1276,7 +1276,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (106:31) 
+// (136:31) 
 function create_if_block_1(ctx) {
 	let img;
 	let img_src_value;
@@ -1313,7 +1313,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (104:6) {#if logo.title}
+// (134:6) {#if logo.title}
 function create_if_block(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -1337,7 +1337,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (117:10) {#each link_list as { link }}
+// (147:10) {#each link_list as { link }}
 function create_each_block_1(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[8].label + "";
@@ -1358,7 +1358,7 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-1hw0vdc");
+			attr(a, "class", "link svelte-orffwz");
 			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
 		},
 		m(target, anchor) {
@@ -1378,7 +1378,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (113:4) {#each footer_links as { label, link_list }}
+// (143:4) {#each footer_links as { label, link_list }}
 function create_each_block(ctx) {
 	let div;
 	let h4;
@@ -1430,9 +1430,9 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h4, "class", "label svelte-1hw0vdc");
-			attr(nav, "class", "svelte-1hw0vdc");
-			attr(div, "class", "item svelte-1hw0vdc");
+			attr(h4, "class", "label svelte-orffwz");
+			attr(nav, "class", "svelte-orffwz");
+			attr(div, "class", "item svelte-orffwz");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div, anchor);
@@ -1551,11 +1551,11 @@ function create_fragment(ctx) {
 		},
 		h() {
 			attr(a, "href", "/");
-			attr(a, "class", "logo svelte-1hw0vdc");
-			attr(div0, "class", "company-description svelte-1hw0vdc");
-			attr(div1, "class", "main svelte-1hw0vdc");
-			attr(div2, "class", "links svelte-1hw0vdc");
-			attr(footer, "class", "section-container-footer svelte-1hw0vdc");
+			attr(a, "class", "logo svelte-orffwz");
+			attr(div0, "class", "company-description svelte-orffwz");
+			attr(div1, "class", "main svelte-orffwz");
+			attr(div2, "class", "links svelte-orffwz");
+			attr(footer, "class", "section-container-footer svelte-orffwz");
 		},
 		m(target, anchor) {
 			insert_hydration(target, footer, anchor);
