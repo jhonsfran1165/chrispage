@@ -2,7 +2,7 @@
   <html lang="en">
     <head>
       <meta name="generator" content="Primo" />
-      <!-- HEAD_svelte-1w6ihgg_START --><style>/* Reset & standardize default styles */
+      <!-- HEAD_svelte-rtyh4k_START --><style>/* Reset & standardize default styles */
 @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
 
 /* Design tokens (apply to components) */
@@ -11,11 +11,15 @@
   --color-accent: #117471;
   --color-accent-2: #20bfa9;
   --color-primary: #1d263a;
-
   /* Base values */
   --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
   --border-radius: 8px;
   --border-color: #e1ecf0;
+  
+  /* Responsive breakpoints */
+  --mobile: 480px;
+  --tablet: 768px;
+  --desktop: 1024px;
 }
 
 /* Root element (use instead of `body`) */
@@ -23,22 +27,34 @@
   font-family: system-ui, sans-serif;
   color: var(--color-primary);
   line-height: 1.2;
-  font-size: 1.125rem;
+  font-size: 16px; /* Base font size for mobile */
   background: white;
 }
+@media (min-width: 768px) {
+#page {
+    font-size: 1.125rem
+}
+  }
 
 /* Elements */
 .section-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 5rem 2rem;
+  padding: 2rem 1rem;
 }
+/* Smaller padding on mobile */
+@media (min-width: 768px) {
+.section-container {
+    max-width: 1200px;
+    padding: 5rem 2rem
+}
+  }
 
 a.link {
   line-height: 1.3;
   font-weight: 500;
   border-bottom: 2px solid;
-  transform: translateY(-2px); /* move link back into place */
+  transform: translateY(-2px);
   transition: var(--transition, 0.1s border);
 }
 
@@ -47,16 +63,33 @@ a.link:hover {
   }
 
 .heading {
-  font-size: 2.5rem;
-  line-height: 1.1;
+  font-size: 1.75rem; /* Smaller heading on mobile */
+  line-height: 1.2;
   font-weight: 600;
 }
 
+@media (min-width: 768px) {
+
+.heading {
+    font-size: 2.5rem;
+    line-height: 1.1
+}
+  }
+
 .subheading {
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.4;
   opacity: 90%;
+  font-size: 1rem;
 }
+
+@media (min-width: 768px) {
+
+.subheading {
+    line-height: 1.5;
+    font-size: 1.125rem
+}
+  }
 
 .button {
   display: inline-flex;
@@ -67,12 +100,21 @@ a.link:hover {
   font-weight: 500;
   background: var(--color-accent, rebeccapurple);
   border-radius: 3rem;
-  padding: 15px 25px;
+  padding: 12px 20px; /* Smaller padding on mobile */
+  width: 100%; /* Full width on mobile */
+  margin: 0.5rem 0;
   transition: var(--transition, 0.1s box-shadow);
   border: 0;
 }
 
-/* reset */
+@media (min-width: 768px) {
+
+.button {
+    width: auto;
+    padding: 15px 25px;
+    margin: 0
+}
+  }
 
 .button:hover {
     box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
@@ -85,53 +127,97 @@ a.link:hover {
 
 /* Content Section */
 .section .content {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 5rem 2rem;
+  padding: 2rem 1rem;
 }
+/* Smaller padding on mobile */
+@media (min-width: 768px) {
+.section .content {
+    max-width: 1200px;
+    padding: 5rem 2rem
+}
+  }
 .section .content p {
     padding: 0.25rem 0;
-    line-height: 1.5;
+    line-height: 1.4;
+    font-size: 1rem;
   }
+@media (min-width: 768px) {
+.section .content p {
+      line-height: 1.5
+  }
+    }
 .section .content img {
     width: 100%;
-    margin: 2rem 0;
+    margin: 1.5rem 0; /* Smaller margins on mobile */
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
   }
-.section .content a.link {
+@media (min-width: 768px) {
+.section .content img {
+      margin: 2rem 0
   }
+    }
 .section .content h1 {
-    font-size: 3rem;
+    font-size: 2rem; /* Smaller on mobile */
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
+@media (min-width: 768px) {
+.section .content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem
+  }
+    }
 .section .content h2 {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
+@media (min-width: 768px) {
+.section .content h2 {
+      font-size: 2.25rem
+  }
+    }
 .section .content h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.25rem;
   }
-.section .content ul {
-    list-style: disc;
+@media (min-width: 768px) {
+.section .content h3 {
+      font-size: 1.75rem
+  }
+    }
+.section .content ul, .section .content ol {
     padding: 0.5rem 0;
     padding-left: 1.25rem;
+    font-size: 1rem;
+  }
+@media (min-width: 768px) {
+.section .content ul, .section .content ol {
+      font-size: 1.125rem
+  }
+    }
+.section .content ul {
+    list-style: disc;
   }
 .section .content ol {
     list-style: decimal;
-    padding: 0.5rem 0;
-    padding-left: 1.25rem;
   }
 .section .content blockquote {
-    padding: 2rem;
+    padding: 1.5rem; /* Smaller padding on mobile */
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
+    margin: 1rem 0;
   }
-</style><!-- HEAD_svelte-1w6ihgg_END -->
+@media (min-width: 768px) {
+.section .content blockquote {
+      padding: 2rem;
+      margin: 2rem 0
+  }
+    }</style><!-- HEAD_svelte-rtyh4k_END -->
       <style>.section-container.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem;background:var(--color-accent);width:100%;max-width:100%}.logo.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{font-size:1.5rem;font-weight:600;line-height:1.2;width:15em;padding-top:1rem;padding-bottom:1rem}.desktop-nav.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-1t73cyn nav.svelte-1t73cyn.svelte-1t73cyn{display:flex;align-items:center;gap:3rem}.desktop-nav.svelte-1t73cyn nav a.link.svelte-1t73cyn.svelte-1t73cyn{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem;color:#fff}.desktop-nav.svelte-1t73cyn nav a.link.svelte-1t73cyn.svelte-1t73cyn:hover{border-color:initial}.desktop-nav.svelte-1t73cyn nav.svelte-1t73cyn .button.svelte-1t73cyn{font-size:1rem;background-color:var(--color-primary)}@media(min-width: 800px){.desktop-nav.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{display:flex
 }}.mobile-nav.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{display:none
 }}#popup.svelte-1t73cyn.svelte-1t73cyn.svelte-1t73cyn{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-1t73cyn button#close.svelte-1t73cyn.svelte-1t73cyn{position:absolute;right:1rem;top:1rem}
@@ -188,7 +274,7 @@ section.svelte-y854m2.svelte-y854m2{display:grid;place-items:center;max-width:va
       </li></ul></section></div> 
 <div class="section" id="section-e4d7f2f7"><div class="section-container svelte-1nxn5fd"><hr></div></div> 
 <div class="section" id="section-7a20a983"><section><div class="section-container"><h2 class="heading svelte-lt8bm7">Solutions every business need</h2>
-    <ul class="svelte-lt8bm7"><li class="svelte-lt8bm7"><div class="icon svelte-lt8bm7"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 1024 1024" class="iconify iconify--ant-design"><!-- HTML_TAG_START --><path fill="currentColor" d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32M440.2 765h-50.8c-2.2 0-4.5-1.1-5.9-2.9L348 718.6l-35.5 43.5a7.38 7.38 0 0 1-5.9 2.9h-50.8c-6.6 0-10.2-7.9-5.8-13.1l62.7-76.8l-61.2-74.9c-4.3-5.2-.7-13.1 5.9-13.1h50.9c2.2 0 4.5 1.1 5.9 2.9l34 41.6l34-41.6c1.5-1.9 3.6-2.9 5.9-2.9h50.8c6.6 0 10.2 7.9 5.9 13.1L383.5 675l62.7 76.8c4.2 5.3.6 13.2-6 13.2m7.8-382c0 2.2-1.4 4-3.2 4H376v68.7c0 1.9-1.8 3.3-4 3.3h-48c-2.2 0-4-1.4-4-3.2V387h-68.8c-1.8 0-3.2-1.8-3.2-4v-48c0-2.2 1.4-4 3.2-4H320v-68.8c0-1.8 1.8-3.2 4-3.2h48c2.2 0 4 1.4 4 3.2V331h68.7c1.9 0 3.3 1.8 3.3 4zm328 369c0 2.2-1.4 4-3.2 4H579.2c-1.8 0-3.2-1.8-3.2-4v-48c0-2.2 1.4-4 3.2-4h193.5c1.9 0 3.3 1.8 3.3 4zm0-104c0 2.2-1.4 4-3.2 4H579.2c-1.8 0-3.2-1.8-3.2-4v-48c0-2.2 1.4-4 3.2-4h193.5c1.9 0 3.3 1.8 3.3 4zm0-265c0 2.2-1.4 4-3.2 4H579.2c-1.8 0-3.2-1.8-3.2-4v-48c0-2.2 1.4-4 3.2-4h193.5c1.9 0 3.3 1.8 3.3 4z"/><!-- HTML_TAG_END --></svg></div>
+    <ul class="svelte-lt8bm7"><li class="svelte-lt8bm7"><div class="icon svelte-lt8bm7"></div>
           <h3 class="title svelte-lt8bm7">Classes</h3>
           <div class="description svelte-lt8bm7">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Enim augue a ut sit sollicitudin. Curabitur vitae sit mauris amet, lobortis in lorem.</div>
         </li><li class="svelte-lt8bm7"><div class="icon svelte-lt8bm7"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--fluent"><!-- HTML_TAG_START --><path fill="currentColor" d="M6.25 2A2.25 2.25 0 0 0 4 4.25v15.5A2.25 2.25 0 0 0 6.25 22h7.5A2.25 2.25 0 0 0 16 19.771v-1.52a.75.75 0 0 0-.75-.75c-.453 0-.739-.123-.936-.282c-.208-.167-.38-.425-.511-.789c-.273-.755-.302-1.75-.302-2.68a.75.75 0 0 0-.202-.512l-.165-.177a3 3 0 0 0-.17-.173c-.074-.07-.3-.285-1.183-1.168c-.469-.469-.728-.865-.813-1.168a.6.6 0 0 1-.016-.325a.7.7 0 0 1 .205-.323a.7.7 0 0 1 .322-.204a.6.6 0 0 1 .324.016c.302.085.698.346 1.167.815c.54.54 1.053 1.047 1.512 1.5c.76.752 1.373 1.36 1.72 1.73a.75.75 0 0 0 1.097-1.023A55 55 0 0 0 16 11.424V8.06l2.842 2.842c.421.422.659.994.659 1.59v8.758a.75.75 0 0 0 1.5 0v-8.757a3.75 3.75 0 0 0-1.099-2.652L16 5.939v-1.69A2.25 2.25 0 0 0 13.75 2zm7.124 16.388a2.7 2.7 0 0 0 1.126.534V19h-.75a.75.75 0 0 0-.75.75v.75h-1.5v-.75a2.25 2.25 0 0 1 1.276-2.028c.16.244.356.472.598.666m-1.372-4.342c.002.253.007.526.022.81a3.5 3.5 0 1 1-1.55-6.324q-.2.133-.378.312c-.292.292-.5.63-.597 1.01s-.074.754.025 1.104c.189.673.665 1.291 1.197 1.823A67 67 0 0 0 11.957 14l.004.003l.037.039zM7 3.5h1.5v.75A2.25 2.25 0 0 1 6.25 6.5H5.5V5h.75A.75.75 0 0 0 7 4.25zm4.5 0H13v.75c0 .414.336.75.75.75h.75v1.5h-.75a2.25 2.25 0 0 1-2.25-2.25zm-3 17H7v-.75a.75.75 0 0 0-.75-.75H5.5v-1.5h.75a2.25 2.25 0 0 1 2.25 2.25z"/><!-- HTML_TAG_END --></svg></div>
