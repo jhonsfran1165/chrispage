@@ -1276,7 +1276,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (136:31) 
+// (243:31) 
 function create_if_block_1(ctx) {
 	let img;
 	let img_src_value;
@@ -1313,7 +1313,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (134:6) {#if logo.title}
+// (241:6) {#if logo.title}
 function create_if_block(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -1337,7 +1337,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (147:10) {#each link_list as { link }}
+// (254:10) {#each link_list as { link }}
 function create_each_block_1(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[8].label + "";
@@ -1358,7 +1358,7 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-orffwz");
+			attr(a, "class", "link svelte-a65hzu");
 			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
 		},
 		m(target, anchor) {
@@ -1378,7 +1378,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (143:4) {#each footer_links as { label, link_list }}
+// (250:4) {#each footer_links as { label, link_list }}
 function create_each_block(ctx) {
 	let div;
 	let h4;
@@ -1430,9 +1430,9 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h4, "class", "label svelte-orffwz");
-			attr(nav, "class", "svelte-orffwz");
-			attr(div, "class", "item svelte-orffwz");
+			attr(h4, "class", "label svelte-a65hzu");
+			attr(nav, "class", "svelte-a65hzu");
+			attr(div, "class", "item svelte-a65hzu");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div, anchor);
@@ -1551,11 +1551,11 @@ function create_fragment(ctx) {
 		},
 		h() {
 			attr(a, "href", "/");
-			attr(a, "class", "logo svelte-orffwz");
-			attr(div0, "class", "company-description svelte-orffwz");
-			attr(div1, "class", "main svelte-orffwz");
-			attr(div2, "class", "links svelte-orffwz");
-			attr(footer, "class", "section-container-footer svelte-orffwz");
+			attr(a, "class", "logo svelte-a65hzu");
+			attr(div0, "class", "company-description svelte-a65hzu");
+			attr(div1, "class", "main svelte-a65hzu");
+			attr(div2, "class", "links svelte-a65hzu");
+			attr(footer, "class", "section-container-footer svelte-a65hzu");
 		},
 		m(target, anchor) {
 			insert_hydration(target, footer, anchor);
