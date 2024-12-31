@@ -1,4 +1,4 @@
-// Featured People 1 - Updated December 8, 2024
+// Featured People 1 - Updated December 31, 2024
 function noop() { }
 function assign(tar, src) {
     // @ts-ignore
