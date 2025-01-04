@@ -1,0 +1,253 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <!-- HEAD_svelte-1c8z3v7_START --><style>/* Reset & standardize default styles */
+@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+/* Design tokens (apply to components) */
+:root {
+  /* Custom theme options */
+  --color-accent: #117471;
+  --color-accent-2: #20bfa9;
+  --color-primary: #1d263a;
+  /* Base values */
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+  --border-color: #e1ecf0;
+  
+  /* Responsive breakpoints */
+  --mobile: 480px;
+  --tablet: 768px;
+  --desktop: 1024px;
+}
+
+/* Root element (use instead of `body`) */
+#page {
+  font-family: system-ui, sans-serif;
+  color: var(--color-primary);
+  line-height: 1.2;
+  font-size: 16px; /* Base font size for mobile */
+  background: white;
+}
+@media (min-width: 768px) {
+#page {
+    font-size: 1.125rem
+}
+  }
+
+/* Elements */
+.section-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+/* Smaller padding on mobile */
+@media (min-width: 768px) {
+.section-container {
+    max-width: 1200px;
+    padding: 5rem 2rem
+}
+  }
+
+a.link {
+  line-height: 1.3;
+  font-weight: 500;
+  border-bottom: 2px solid;
+  transform: translateY(-2px);
+  transition: var(--transition, 0.1s border);
+}
+
+a.link:hover {
+    border-color: transparent;
+  }
+
+.heading {
+  font-size: 1.75rem; /* Smaller heading on mobile */
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+
+.heading {
+    font-size: 2.5rem;
+    line-height: 1.1
+}
+  }
+
+.subheading {
+  font-weight: 400;
+  line-height: 1.4;
+  opacity: 90%;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+
+.subheading {
+    line-height: 1.5;
+    font-size: 1.125rem
+}
+  }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 500;
+  background: var(--color-accent, rebeccapurple);
+  border-radius: 3rem;
+  padding: 12px 20px; /* Smaller padding on mobile */
+  width: 100%; /* Full width on mobile */
+  margin: 0.5rem 0;
+  transition: var(--transition, 0.1s box-shadow);
+  border: 0;
+}
+
+@media (min-width: 768px) {
+
+.button {
+    width: auto;
+    padding: 15px 25px;
+    margin: 0
+}
+  }
+
+.button:hover {
+    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
+  }
+
+.button.inverted {
+    background: transparent;
+    color: var(--color-accent, rebeccapurple);
+  }
+
+/* Content Section */
+.section .content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+/* Smaller padding on mobile */
+@media (min-width: 768px) {
+.section .content {
+    max-width: 1200px;
+    padding: 5rem 2rem
+}
+  }
+.section .content p {
+    padding: 0.25rem 0;
+    line-height: 1.4;
+    font-size: 1rem;
+  }
+@media (min-width: 768px) {
+.section .content p {
+      line-height: 1.5
+  }
+    }
+.section .content img {
+    width: 100%;
+    margin: 1.5rem 0; /* Smaller margins on mobile */
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+@media (min-width: 768px) {
+.section .content img {
+      margin: 2rem 0
+  }
+    }
+.section .content h1 {
+    font-size: 2rem; /* Smaller on mobile */
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+@media (min-width: 768px) {
+.section .content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem
+  }
+    }
+.section .content h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+@media (min-width: 768px) {
+.section .content h2 {
+      font-size: 2.25rem
+  }
+    }
+.section .content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+@media (min-width: 768px) {
+.section .content h3 {
+      font-size: 1.75rem
+  }
+    }
+.section .content ul, .section .content ol {
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+    font-size: 1rem;
+  }
+@media (min-width: 768px) {
+.section .content ul, .section .content ol {
+      font-size: 1.125rem
+  }
+    }
+.section .content ul {
+    list-style: disc;
+  }
+.section .content ol {
+    list-style: decimal;
+  }
+.section .content blockquote {
+    padding: 1.5rem; /* Smaller padding on mobile */
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+  }
+@media (min-width: 768px) {
+.section .content blockquote {
+      padding: 2rem;
+      margin: 2rem 0
+  }
+    }</style><!-- HEAD_svelte-1c8z3v7_END -->
+      <style>.svelte-1p40t50.svelte-1p40t50{--icon-size:30px;--max-width:900px}.section-container.svelte-1p40t50.svelte-1p40t50{display:grid;gap:5rem}.heading-group.svelte-1p40t50.svelte-1p40t50{display:grid;gap:1rem;text-align:left;margin-left:0}ul.cards.svelte-1p40t50.svelte-1p40t50{display:grid;grid-template-columns:repeat(auto-fit, minmax(15rem, 1fr));gap:5rem}ul.cards.svelte-1p40t50 li.svelte-1p40t50{display:grid;place-items:start;text-align:left;gap:1rem}ul.cards.svelte-1p40t50 li .icon.svelte-1p40t50{border:1px solid var(--border-color);border-radius:var(--border-radius);padding:0.75rem;color:var(--color-accent, black);font-size:var(--icon-size)}ul.cards.svelte-1p40t50 li .title.svelte-1p40t50{color:var(--color-heading);display:grid;align-items:center;font-size:1.25rem;line-height:1.75;font-weight:600}ul.cards.svelte-1p40t50 li .content.svelte-1p40t50{font-weight:400}</style>
+    </head>
+    <body id="page">
+       
+<div class="section svelte-1p40t50" id="section-09fd09e9"><section class="section-container svelte-1p40t50"><header class="heading-group svelte-1p40t50"><p class="svelte-1p40t50">Benefits</p>
+    <h2 class="heading svelte-1p40t50">Offering you something sausy</h2></header>
+  <ul class="cards svelte-1p40t50"><li class="svelte-1p40t50"><div class="icon svelte-1p40t50"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--material-symbols"><!-- HTML_TAG_START --><path fill="currentColor" d="m10.95 10.5l-.7-.7q-.3-.3-.7-.3t-.7.3t-.3.713t.3.712l1.4 1.425q.3.3.7.3t.7-.3L15.2 9.1q.3-.3.3-.712t-.3-.713t-.712-.3t-.713.3zm9.05-.3q0 1.125-.437 2.363t-1.275 2.574T16.2 17.9t-2.875 2.925q-.275.25-.625.375t-.7.125t-.7-.125t-.625-.375Q9.05 19.325 7.8 17.9t-2.087-2.762t-1.275-2.575T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2"/><!-- HTML_TAG_END --></svg></div>
+        <div class="body svelte-1p40t50"><h3 class="title svelte-1p40t50">Accurate GPS</h3>
+          <div class="content svelte-1p40t50"><!-- HTML_TAG_START --><p>So you know where your friends and loved ones are at all times….</p><!-- HTML_TAG_END --></div></div>
+      </li><li class="svelte-1p40t50"><div class="icon svelte-1p40t50"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--material-symbols"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.075 22q-2.1 0-3.937-.8t-3.2-2.163q-1.363-1.362-2.163-3.2t-.8-3.937q0-3.1 1.713-5.625t4.587-3.7q.35-.125.725-.088t.625.238q.2.175.313.488t.112.812q.05 1.975.8 3.763T13 10.975q1.4 1.4 3.2 2.15t3.775.8q.525 0 .8.088t.45.287q.2.25.263.65t-.063.725q-1.15 2.875-3.7 4.6T12.075 22ZM16.75 7.25L15 6.45q-.3-.125-.3-.45t.3-.45l1.75-.8l.8-1.75q.125-.3.45-.3t.45.3l.8 1.75l1.75.8q.3.125.3.45t-.3.45l-1.75.8l-.8 1.75q-.125.3-.45.3t-.45-.3l-.8-1.75Z"/><!-- HTML_TAG_END --></svg></div>
+        <div class="body svelte-1p40t50"><h3 class="title svelte-1p40t50">Dark Mode Setting</h3>
+          <div class="content svelte-1p40t50"><!-- HTML_TAG_START --><p>Look at your screen in the dark without disturbing your sleep.</p><!-- HTML_TAG_END --></div></div>
+      </li><li class="svelte-1p40t50"><div class="icon svelte-1p40t50"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--material-symbols"><!-- HTML_TAG_START --><path fill="currentColor" d="m6 18l-2.3 2.3q-.475.475-1.088.213T2 19.575V4q0-.825.588-1.412T4 2h16q.825 0 1.413.588T22 4v12q0 .825-.587 1.413T20 18z"/><!-- HTML_TAG_END --></svg></div>
+        <div class="body svelte-1p40t50"><h3 class="title svelte-1p40t50">Real-time Collaboration</h3>
+          <div class="content svelte-1p40t50"><!-- HTML_TAG_START --><p>Talk whenever you want anywhere, on any device with live updates.</p><!-- HTML_TAG_END --></div></div>
+      </li></ul></section></div> 
+
+      <script type="module">
+      import('/_symbols/9aaec99e-3638-47f1-8c9c-c23b9fb785f4.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-09fd09e9'),
+              hydrate: true,
+              props: {"superhead":"Benefits","heading":"Offering you something sausy","cards":[{"icon":"material-symbols:where-to-vote-rounded","title":"Accurate GPS","content":{"html":"<p>So you know where your friends and loved ones are at all times….</p>","markdown":"So you know where your friends and loved ones are at all times...."}},{"icon":"material-symbols:sleep-rounded","title":"Dark Mode Setting","content":{"html":"<p>Look at your screen in the dark without disturbing your sleep.</p>","markdown":"Look at your screen in the dark without disturbing your sleep."}},{"icon":"material-symbols:chat-bubble-rounded","title":"Real-time Collaboration","content":{"html":"<p>Talk whenever you want anywhere, on any device with live updates.</p>","markdown":"Talk whenever you want anywhere, on any device with live updates."}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    </script>
+    </body>
+  </html>
+  
