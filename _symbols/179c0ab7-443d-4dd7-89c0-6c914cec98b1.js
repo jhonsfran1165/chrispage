@@ -1,4 +1,4 @@
-// Multi-Gallery - Updated January 8, 2025
+// Multi-Gallery - Updated January 9, 2025
 function noop() { }
 function run(fn) {
     return fn();
@@ -579,7 +579,7 @@ function get_each_context_2(ctx, list, i) {
 	return child_ctx;
 }
 
-// (275:8) {#each gallery as group, i}
+// (270:8) {#each gallery as group, i}
 function create_each_block_2(ctx) {
 	let button;
 	let t0_value = /*group*/ ctx[12].label + "";
@@ -619,7 +619,7 @@ function create_each_block_2(ctx) {
 	};
 }
 
-// (286:8) {#each items as {mobile_image, desktop_image}}
+// (277:8) {#each items as {mobile_image, desktop_image}}
 function create_each_block_1(ctx) {
 	let picture;
 	let source0;
@@ -703,7 +703,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (284:4) {#each gallery as { items }
+// (275:4) {#each gallery as { items }
 function create_each_block(ctx) {
 	let div;
 	let t;
@@ -796,10 +796,7 @@ function create_fragment(ctx) {
 	let t2;
 	let t3;
 	let div1;
-	let button;
 	let t4;
-	let t5;
-	let t6;
 	let each_value_2 = /*gallery*/ ctx[2];
 	let each_blocks_1 = [];
 
@@ -827,15 +824,12 @@ function create_fragment(ctx) {
 			t2 = text(/*title*/ ctx[0]);
 			t3 = space();
 			div1 = element("div");
-			button = element("button");
-			t4 = text("All");
-			t5 = space();
 
 			for (let i = 0; i < each_blocks_1.length; i += 1) {
 				each_blocks_1[i].c();
 			}
 
-			t6 = space();
+			t4 = space();
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].c();
@@ -865,11 +859,6 @@ function create_fragment(ctx) {
 			t3 = claim_space(div2_nodes);
 			div1 = claim_element(div2_nodes, "DIV", { class: true });
 			var div1_nodes = children(div1);
-			button = claim_element(div1_nodes, "BUTTON", { class: true, "data-filter": true });
-			var button_nodes = children(button);
-			t4 = claim_text(button_nodes, "All");
-			button_nodes.forEach(detach);
-			t5 = claim_space(div1_nodes);
 
 			for (let i = 0; i < each_blocks_1.length; i += 1) {
 				each_blocks_1[i].l(div1_nodes);
@@ -877,7 +866,7 @@ function create_fragment(ctx) {
 
 			div1_nodes.forEach(detach);
 			div2_nodes.forEach(detach);
-			t6 = claim_space(div3_nodes);
+			t4 = claim_space(div3_nodes);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].l(div3_nodes);
@@ -891,8 +880,6 @@ function create_fragment(ctx) {
 			attr(span, "class", "cs-topper");
 			attr(h2, "class", "cs-title svelte-lljsul");
 			attr(div0, "class", "cs-flex svelte-lljsul");
-			attr(button, "class", "cs-button svelte-lljsul");
-			attr(button, "data-filter", "all");
 			attr(div1, "class", "cs-button-group svelte-lljsul");
 			attr(div2, "class", "cs-content svelte-lljsul");
 			attr(div3, "class", "cs-container svelte-lljsul");
@@ -911,9 +898,6 @@ function create_fragment(ctx) {
 			append_hydration(h2, t2);
 			append_hydration(div2, t3);
 			append_hydration(div2, div1);
-			append_hydration(div1, button);
-			append_hydration(button, t4);
-			append_hydration(div1, t5);
 
 			for (let i = 0; i < each_blocks_1.length; i += 1) {
 				if (each_blocks_1[i]) {
@@ -921,7 +905,7 @@ function create_fragment(ctx) {
 				}
 			}
 
-			append_hydration(div3, t6);
+			append_hydration(div3, t4);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				if (each_blocks[i]) {

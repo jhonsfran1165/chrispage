@@ -1,4 +1,4 @@
-// New Block - Updated January 8, 2025
+// New Block - Updated January 9, 2025
 function noop() { }
 const identity = x => x;
 function assign(tar, src) {
@@ -8788,7 +8788,7 @@ function create_default_slot_11(ctx) {
 function create_default_slot_10(ctx) {
 	let icon;
 	let current;
-	icon = new Component$1({ props: { icon: "mdi-light:home" } });
+	icon = new Component$1({ props: { icon: "lucide:chevron-down" } });
 
 	return {
 		c() {
