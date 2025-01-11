@@ -2753,7 +2753,7 @@ function create_each_block(ctx) {
 			attr(div0, "class", "icon svelte-lt8bm7");
 			attr(h3, "class", "title svelte-lt8bm7");
 			attr(div1, "class", "description svelte-lt8bm7");
-			attr(li, "class", "svelte-lt8bm7");
+			attr(li, "class", "block svelte-lt8bm7");
 		},
 		m(target, anchor) {
 			insert_hydration(target, li, anchor);
